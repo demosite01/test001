@@ -1,0 +1,444 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
+@mixin ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul {
+  @include ul;
+}
+
+@mixin height {
+  min-height: 100vh;
+}
+
+$background1: #000033;
+
+body {
+  background-color: $background1;
+}
+
+.Splash {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  padding: {
+    left: 30px;
+    right: 30px;
+  }
+  background: $background1;
+
+  a {
+    display: block;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// login-wrapp start
+.login-wrapp {
+  background-color: $background1;
+  @include height;
+
+  padding: {
+    left: 30px;
+    right: 30px;
+    top: 16px;
+    bottom: 42px;
+  }
+
+  .logo {
+    margin-bottom: 44px;
+    text-align: center;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h4 {
+    margin-bottom: 44px;
+
+    font: {
+      family: 'Public Sans';
+      style: normal;
+      weight: 700;
+      size: 36px;
+    }
+
+    line-height: 42px;
+    text-align: center;
+    color: #f2f2e6;
+  }
+
+  form {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.login {
+      label {
+        font: {
+          family: 'Public Sans';
+          style: normal;
+          weight: 500;
+          size: 24px;
+        }
+
+        line-height: 28px;
+        letter-spacing: -0.03em;
+        color: #f2f2e6;
+        margin-bottom: 3px;
+      }
+
+      input {
+        border: 2px solid #f2f2e6;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 8px;
+
+        font: {
+          family: 'Public Sans';
+          style: normal;
+          weight: 500;
+          size: 18px;
+        }
+
+        background: #004b55;
+        line-height: 21px;
+        letter-spacing: -0.04em;
+        color: rgb(242 242 230 / 50%);
+
+        padding: {
+          left: 14px;
+          right: 14px;
+          bottom: 4.5px;
+          top: 5.5px;
+        }
+
+        ::placeholder {
+          color: rgb(242 242 230 / 50%);
+        }
+      }
+
+      .mb-3 {
+        margin-bottom: 20px !important;
+      }
+
+      .Password-item {
+        position: relative;
+
+        label {
+          &.show {
+            position: absolute;
+            right: 15px;
+            top: 0;
+            opacity: 0.7;
+
+            &::after {
+              position: absolute;
+              content: '';
+              right: -1px;
+              top: 59%;
+              transform: translateY(-50%) rotate(317deg);
+              width: 22px;
+              height: 3px;
+              background-color: rgb(255 255 255 / 80%);
+              z-index: 99;
+            }
+
+            &.active {
+              opacity: 1;
+
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .link-from {
+        text-align: center;
+        margin-top: 3px;
+
+        ul {
+          padding-bottom: 25px;
+
+          li {
+            margin-bottom: 11px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            a {
+              font: {
+                family: 'Public Sans';
+                style: normal;
+                weight: 500;
+                size: 24px;
+              }
+              text-decoration: none;
+              line-height: 28px;
+              color: #f2f2e6;
+            }
+          }
+        }
+
+        button {
+          background: #004b55;
+          border: 3.3px solid #f2f2e6;
+          border-radius: 11px;
+          color: #fff;
+          font-size: 62px;
+          line-height: 1;
+          transition: all ease 0.6s;
+
+          padding: {
+            left: 10px;
+            right: 10px;
+            top: 8px;
+            bottom: 8px;
+          }
+
+          &:hover {
+            background-color: #fff;
+            color: #004b55;
+            border-color: #004b55;
+          }
+        }
+
+        &.link-from2 {
+          margin-top: 57px;
+
+          a {
+            background: #004b55;
+            border: 3px solid #f2f2e6;
+            border-radius: 5px;
+            padding: 2px 0;
+            font-size: 27px;
+            color: #fff;
+            line-height: 1;
+            position: relative;
+            right: -66px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// home start
+.home-wrapp {
+  padding: {
+    left: 15px;
+    right: 15px;
+    bottom: 42px;
+  }
+
+  .home-top {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: {
+      top: 11px;
+      bottom: 70px;
+    }
+
+    ul {
+      li {
+        align-self: center;
+
+        &:nth-child(1) {
+          img {
+            max-width: 26px;
+            margin-right: 10px;
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            max-width: 260px;
+            position: relative;
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            max-width: 8px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .item {
+    margin-bottom: 40px;
+
+    h4 {
+      font-family: 'Public Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center;
+      color: #f2f2e6;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      &.item-inner {
+        li {
+          margin: {
+            left: 9px;
+            right: 9px;
+          }
+
+          background: #044b55;
+          border: 3.3px solid #f2f2e6;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          height: 108px;
+          width: 136px;
+          overflow: hidden;
+          transition: all ease 0.6s;
+          &:hover {
+            background-color: #000033;
+          }
+          &:hover {
+            background-color: #000033;
+          }
+          &:active {
+            background-color: #000033;
+          }
+          &:focus {
+            background-color: #000033;
+          }
+          a {
+            border-radius: 0px;
+            display: block;
+
+            padding: {
+              left: 23px;
+              right: 23px;
+              top: 18px;
+              bottom: 18px;
+            }
+
+            // img {
+            //   fill: red;
+            // }
+          }
+        }
+      }
+    }
+  }
+
+  .question {
+    .item-left {
+      max-width: 209px;
+      margin-right: 20px;
+
+      p {
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: -0.04em;
+        color: #ffffff;
+      }
+    }
+
+    .item-right {
+      margin-left: 10px;
+
+      a {
+        background: #004b55;
+        border: 3px solid #f2f2e6;
+        border-radius: 5px;
+        padding: 2px 0;
+        font-size: 27px;
+        color: #fff;
+        line-height: 1;
+      }
+    }
+  }
+
+  .AudioRecords {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70px;
+
+    h2 {
+      font: {
+        family: 'Public Sans';
+        style: normal;
+        weight: 700;
+        size: 36px;
+      }
+
+      line-height: 42px;
+      text-align: center;
+      color: #f2f2e6;
+    }
+
+    p {
+      font: {
+        family: 'Public Sans';
+        style: normal;
+        weight: 400;
+        size: 20px;
+      }
+
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: -0.02em;
+
+      color: #f2f2e6;
+    }
+
+    .audio-item {
+      margin-top: 155px;
+      text-align: center;
+
+      a {
+        border-radius: 11px;
+        display: inline-block;
+        transition: all ease 0.6s;
+        &:hover {
+          background-color: #000033;
+        }
+        &:active {
+          background-color: #000033;
+        }
+        &:focus {
+          background-color: #000033;
+        }
+        padding: {
+          left: 23px;
+          right: 23px;
+          top: 18px;
+          bottom: 18px;
+        }
+
+        background: #044b55;
+        border: 3.3px solid #f2f2e6;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+      }
+    }
+  }
+}

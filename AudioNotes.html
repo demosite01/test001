@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="description" content="Web Content" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="author" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+
+  <!--  <link rel="apple-touch-icon" sizes="180x180" href="assests/images/fav_icon.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assests/images/fav_icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assests/images/fav_icon.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assests/images/fav_icon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assests/images/fav_icon.png"> -->
+  <!-- Custom css -->
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+  <title>Home | Audio Notes</title>
+</head>
+
+<body>
+  <!-- preloader Splash Screen start -->
+  <section class="Splash preloader">
+    <a href=""><img src="assets/img/logodm.png" alt="img" class="img-fluid" /></a>
+  </section>
+  <!-- preloader  Splash Screen end -->
+  <main>
+    <!-- home start -->
+    <section class="home-wrapp">
+      <div class="home-top">
+        <ul class="d-flex justify-content-center p-0">
+          <li><a href=""><img src="assets/img/left.svg" alt="img" class="img-fluid"></a></li>
+          <li><a href=""><img src="assets/img/logodm.png" alt="img" class="img-fluid"></a></li>
+          <li><a href=""><img src="assets/img/dot-3.svg" alt="img" class="img-fluid"></a></li>
+        </ul>
+      </div>
+      <!-- Audio Records star -->
+      <div class="AudioRecords">
+        <h2>Audio Records</h2>
+        <p>To save time, record your report. Please include the following: Project, location, date of service, activity,
+          number of clients, etc...blah blah</p>
+        <div class="audio-item">
+          <a href="">
+            <img src="./assets/img/3.svg" alt="img" class="img-fluid">
+
+          </a>
+        </div>
+      </div>
+      <!-- Audio Records end -->
+
+    </section>
+    <!-- home end -->
+  </main>
+
+  <!--  jQuery js-->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- bootstrap Bundle with Popper -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <!-- slick slider js cdn link -->
+  <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
+  <script>
+    $(window).on("load", function () {
+      $(".preloader").fadeOut("slow");
+    });
+  </script>
+</body>
+
+</html>
