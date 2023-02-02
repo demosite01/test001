@@ -101,8 +101,11 @@
   <!-- slick slider js cdn link -->
   <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
   <script>
-    $(window).on("load", function () {
-      $(".preloader").fadeOut("slow");
+
+    $(window).on('load', function () {
+      setTimeout(function () {
+        $('.preloader').fadeOut('slow');
+      }, 1000)
     });
   </script>
 </body>
